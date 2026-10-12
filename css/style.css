@@ -1,0 +1,27 @@
+body {
+    background-color: #f3f4f6;
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.welcome-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+h1 {
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #4b5563;
+    font-size: 16px;
+}
