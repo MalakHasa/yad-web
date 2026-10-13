@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الخدمة - YAD.WEB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header class="site-header scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">YAD<span>.WEB</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#services">الخدمات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم تفاصيل الخدمة -->
+    <section class="service-details-section">
+        <div class="container">
+            <div class="service-header-box">
+                <h1 id="service-title">عنوان الخدمة</h1>
+                <p id="service-desc">توضيح تفصيلي للخدمة...</p>
+            </div>
+
+            <!-- نموذج الأعمال / المعرض -->
+            <div class="portfolio-section">
+                <h2>نموذج أعمال سابقة لهذه الخدمة</h2>
+                <div class="portfolio-grid" id="portfolio-gallery">
+                    <!-- تعبئة ديناميكية عبر الجافاسكريبت -->
+                </div>
+            </div>
+
+            <!-- زر طلب الخدمة عبر الواتساب -->
+            <div class="order-action-box">
+                <h3>هل أنت مهتم بهذه الخدمة؟</h3>
+                <p>اطلبها الآن وتواصل معنا مباشرة عبر واتساب لمناقشة تفاصيل مشروعك.</p>
+                <a id="whatsapp-btn" href="#" target="_blank" class="btn-whatsapp-large">
+                    <i class="fab fa-whatsapp"></i> اطلب الخدمة الآن عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 YAD.WEB</p>
+        </div>
+    </footer>
+
+    <!-- جافاسكريبت لربط تفاصيل الخدمة -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceKey = urlParams.get('service') || 'web-dev';
+
+        const servicesData = {
+            'web-dev': {
+                title: 'تطوير مواقع الويب',
+                desc: 'نحن نقدم خدمات تطوير مواقع الويب الشاملة باستخدام أحدث التقنيات (HTML, CSS, JavaScript, PHP, Node.js). نضمن لك سرعة فائقة، حماية عالية، وتوافق تام مع جميع الأجهزة والشاشات.',
+                whatsappMsg: 'مرحباً YAD.WEB، أود الاستفسار وطلب خدمة تطوير مواقع الويب.',
+                portfolio: [
+                    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=500',
+                    'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=500'
+                ]
+            },
+            'app-dev': {
+                title: 'تطبيقات الجوال',
+                desc: 'نقوم بتصميم وتطوير تطبيقات الهواتف الذكية لأنظمة أندرويد و iOS بأداء متميز، وتجربة استخدام سلسة تلبي طموحاتك وتخدم عملائك بكفاءة عالية.',
+                whatsappMsg: 'مرحباً YAD.WEB، أود الاستفسار وطلب خدمة تطبيقات الجوال.',
+                portfolio: [
+                    'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=500',
+                    'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=500'
+                ]
+            },
+            'ui-ux': {
+                title: 'تصميم واجهات UI/UX',
+                desc: 'نصمم واجهات مستخدم جذابة واحترافية تركز على راحة العميل وسهولة التنقل، مع دراسة دقيقة لتجربة المستخدم (User Experience) لرفع نسبة تفاعل الزوار.',
+                whatsappMsg: 'مرحباً YAD.WEB، أود الاستفسار وطلب خدمة تصميم واجهات UI/UX.',
+                portfolio: [
+                    'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=500',
+                    'https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&q=80&w=500'
+                ]
+            }
+        };
+
+        const currentService = servicesData[serviceKey] || servicesData['web-dev'];
+
+        document.getElementById('service-title').innerText = currentService.title;
+        document.getElementById('service-desc').innerText = currentService.desc;
+        
+        const phone = '970000000000'; // استبدلي الرقم برقم الواتساب الخاص بك
+        document.getElementById('whatsapp-btn').href = `https://wa.me/${phone}?text=${encodeURIComponent(currentService.whatsappMsg)}`;
+
+        const galleryContainer = document.getElementById('portfolio-gallery');
+        currentService.portfolio.forEach(imgUrl => {
+            const imgBox = document.createElement('div');
+            imgBox.className = 'portfolio-item';
+            imgBox.innerHTML = `<img src="${imgUrl}" alt="نموذج عمل">`;
+            galleryContainer.appendChild(imgBox);
+        });
+    </script>
+</body>
+</html>

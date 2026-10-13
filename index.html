@@ -3,14 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YAD.WEB</title>
-    <!-- ربط ملف الـ CSS الخارجي -->
+    <title>YAD.WEB - للخدمات البرمجية والتقنية</title>
+    <!-- استدعاء خط Tajawal العصري من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- مكتبة AOS للأنيميشن والظهور -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="welcome-box">
-        <h1>مرحباً بكِ في YAD.WEB 🚀</h1>
-        <p>بيئة العمل جاهزة وتم ربط ملفات الـ CSS بنجاح!</p>
-    </div>
+
+    <!-- الهيدر الذكي والثابت -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo">
+                <img src="images/الشعار.png" alt="شعار YAD.WEB" class="logo-img">
+                <span class="logo-text">YAD<span>.WEB</span></span>
+            </a>
+            
+            <!-- زر القائمة للموبايل -->
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- القائمة الرئيسية مع الأيقونات المرتبة على نفس السطر -->
+            <ul class="main-nav" id="mainNav">
+                <li><a href="#hero" class="nav-link active"><i class="fas fa-home"></i> <span>الرئيسية</span></a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> <span>عن الشركة</span></a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-cogs"></i> <span>الخدمات</span></a></li>
+                <li><a href="#team" class="nav-link"><i class="fas fa-users"></i> <span>من نحن</span></a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> <span>تواصل معنا</span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 1. قسم الهيرو -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+                <i class="fas fa-sparkles"></i> الشريك التقني الأول لأعمالك الرقمية
+            </div>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                نصنع مستقبل عملك الرقمي <span class="gradient-text">بإبداع واحترافية</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                في YAD.WEB، نقدم حلول الويب المبتكرة، وتطبيقات الجوال، وتصميم واجهات المستخدم بأعلى معايير الجودة والكفاءة التقنية.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <a href="#services" class="btn-main">استكشف خدماتنا <i class="fas fa-arrow-left"></i></a>
+                <a href="https://wa.me/972569040508?text=مرحباً%20YAD.WEB،%20أود%20التواصل%20لاستفسار%20عن%20الخدمات." target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> تواصل مباشر</a>
+            </div>
+        </div>
+        <div class="hero-glow"></div>
+    </section>
+
+    <!-- 2. قسم عن الشركة (لماذا YAD.WEB؟) -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">لماذا YAD.WEB؟</h2>
+                <p class="section-subtitle">نجمع بين الخبرة الهندسية الأكاديمية والاحترافية العملية لنقدم لك أفضل الحلول الرقمية.</p>
+            </div>
+            
+            <div class="why-us-grid">
+                <!-- ميزة 1 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>خلفية هندسية وتقنية</h3>
+                    <p>إدارة وهندسة مشاريع برمجية بخبرة أكاديمية وعملية قوية لضمان بناء أنظمة قوية ومستقرة.</p>
+                </div>
+
+                <!-- ميزة 2 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-code"></i></div>
+                    <h3>أكواد نظيفة وقابلة للتطوير</h3>
+                    <p>نكتب برمجيات بمعايير قياسية (Clean Code)، قابلة للتوسع والتطوير مع نمو وتوسع نشاطك التجاري.</p>
+                </div>
+
+                <!-- ميزة 3 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>فريق تقني هندسي متكامل</h3>
+                    <p>منظومة عمل متكاملة تضم مطورين ومصممين وخبراء لتقديم حلول شاملة تبدأ من الفكرة حتى الإطلاق.</p>
+                </div>
+
+                <!-- ميزة 4 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>دعم مستمر والتزام تام</h3>
+                    <p>نرافقك خطوة بخطوة حتى بعد تسليم المشروع، مع التزام كامل بالمواعيد ودعم فني مستمر.</p>
+                </div>
+            </div>
+
+            <!-- شريط الإحصائيات -->
+            <div class="about-stats-bar" data-aos="fade-up" data-aos-duration="1000">
+                <div class="stat-item">
+                    <h3>+100</h3>
+                    <p>مشروع منجز بنجاح</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>التزام وجودة برمجية</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>دعم واستجابة سريعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم الخدمات -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">الخدمات التي نقدّمها</h2>
+                <p class="section-subtitle">حلول تقنية متكاملة ترتقي بمشروعك إلى المستوى التالي</p>
+            </div>
+            <div class="services-grid">
+                
+                <!-- خدمة 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>تطوير مواقع الويب</h3>
+                    <p>بناء وتطوير مواقع إلكترونية سريعة، متجاوبة، وآمنة تلبي متطلبات شركتك وتزيد مبيعاتك.</p>
+                    <a href="https://wa.me/972569040508?text=مرحباً%20YAD.WEB،%20أود%20طلب%20خدمة%20تطوير%20مواقع%20الويب." target="_blank" class="btn-whatsapp-order">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </a>
+                </div>
+
+                <!-- خدمة 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>تطبيقات الجوال</h3>
+                    <p>تصميم وتطوير تطبيقات أندرويد و IOS بأداء عالي وتجربة مستخدم متميزة وجذابة.</p>
+                    <a href="https://wa.me/972569040508?text=مرحباً%20YAD.WEB،%20أود%20طلب%20خدمة%20تطبيقات%20الجوال." target="_blank" class="btn-whatsapp-order">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </a>
+                </div>
+
+                <!-- خدمة 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>تصميم واجهات UI/UX</h3>
+                    <p>تصميم واجهات وتجارب استخدام عصرية تضمن راحة المستخدم وجاذبية المنصة الرقمية.</p>
+                    <a href="https://wa.me/972569040508?text=مرحباً%20YAD.WEB،%20أود%20طلب%20خدمة%20تصميم%20واجهات%20UI/UX." target="_blank" class="btn-whatsapp-order">
+                        <i class="fab fa-whatsapp"></i> اطلب الآن
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. قسم من نحن (بطاقة المدير الدائرية الفخمة) -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">من نحن (إدارة الشركة)</h2>
+                <p class="section-subtitle">قيادة احترافية وخبرة برمجية واسعة يقودها مؤسس الشركة مع فريق هندسي تقني متكامل.</p>
+            </div>
+
+            <!-- بطاقة المدير المركزية الدائرية -->
+            <div class="single-director-card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="director-avatar-box">
+                    <img src="images/يوسف أيمن.jpg" alt="يوسف أيمان - المدير التنفيذي">
+                </div>
+                <div class="director-content">
+                    <h3>يوسف أيمان</h3>
+                    <span class="role">المؤسس والمدير التنفيذي | مطور Full-Stack & Front-End</span>
+                    <p class="director-bio">
+مهندس ومطور برمجيات ذو خبرة واسعة في هندسة وتطوير الويب وتجربة المستخدم. يقود يوسف شركة YAD.WEB مدعوماً بـ فريق تقني هندسي متكامل من الخبراء والمبرمجين والمصممين لتقديم حلول رقمية مبتكرة وعالية الأداء تلبي تطلعات كافة العملاء.                    </p>
+
+                    <!-- زر تحميل السيرة الذاتية -->
+                    <div class="cv-download-wrapper">
+                        <a href="YOUSIF A. H. DAHLAN 2.pdf" download class="btn-cv-download">
+                            <i class="fas fa-file-download"></i> تحميل السيرة الذاتية (CV)
+                        </a>
+                    </div>
+
+                    <!-- روابط التواصل الاجتماعي الخاصة بيوسف -->
+                    <div class="member-social">
+                        <a href="https://wa.me/972569040508" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/yousof.a.d?obrf=MXM3ZDdjYWI0bjFqcQ%3D%3D" target="_blank" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/yousif-ayman-dev" target="_blank" aria-label="جيت هاب"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. الفوتر  -->
+    <footer id="contact" class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <a href="#" class="logo footer-logo-text">YAD<span>.WEB</span></a>
+                <p>شريكك التقني الموثوق لتطوير ونمو أعمالك الرقمية بأعلى معايير الابتكار.</p>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">عن الشركة</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#team">فريق العمل</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>تواصل معنا</h3>
+                <div class="social-links">
+                    <a href="https://wa.me/972569040508" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/yad.web?rpxt=NzIxaTBubG5pODFy" target="_blank" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/yousifayman" target="_blank" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 YAD.WEB</p>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- سكربتات التفاعل والأنيميشن -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        const siteHeader = document.getElementById('siteHeader');
+        const sections = document.querySelectorAll('section, footer');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollPos = window.pageYOffset + 250;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPos >= sectionTop && scrollPos < (sectionTop + sectionHeight)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                current = 'contact';
+            }
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (current && link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('show');
+                siteHeader.classList.add('scrolled');
+            } else {
+                scrollTopBtn.classList.remove('show');
+                siteHeader.classList.remove('scrolled');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
