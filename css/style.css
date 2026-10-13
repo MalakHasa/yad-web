@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Tajawal', Tahoma, sans-serif; /* تطبيق خط Tajawal العصري والاحترافي */
+    font-family: 'Tajawal', Tahoma, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -100,7 +100,6 @@ section {
     transform: scale(1.03);
 }
 
-/* شعار الشركة دائري 100% */
 .logo-img {
     width: 48px;
     height: 48px;
@@ -128,7 +127,6 @@ section {
     align-items: center;
 }
 
-/* ضبط الأيقونات والكلمات لتكون على نفس الخط وبحجم متناسق */
 .main-nav a {
     text-decoration: none;
     color: var(--text-main);
@@ -307,7 +305,6 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    margin-bottom: 50px;
 }
 
 .why-card {
@@ -356,31 +353,6 @@ section {
     color: var(--text-muted);
     font-size: 15px;
     line-height: 1.6;
-}
-
-.about-stats-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    background: var(--navy-blue);
-    padding: 40px;
-    border-radius: 16px;
-    text-align: center;
-    color: var(--bg-white);
-    box-shadow: 0 10px 30px rgba(10, 37, 64, 0.15);
-}
-
-.stat-item h3 {
-    font-size: 38px;
-    color: var(--teal-light);
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
-.stat-item p {
-    color: #94A3B8;
-    font-size: 15px;
-    font-weight: 600;
 }
 
 /* ==========================================
